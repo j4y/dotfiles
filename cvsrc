@@ -1,0 +1,8 @@
+# This applies to all cvs <foo> commands -z3 enables compression
+cvs		-z4
+#diff/rdiff -u provides unified diff  -p print to standard output
+diff	-pu
+rdiff	-u
+# -P prune empty directories -d create new directories
+update	-Pd
+checkout	-P
