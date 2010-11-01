@@ -11,10 +11,10 @@ if has("autocmd")
   \ endif
 endif
 
-"Usually I don't care about case
+" ignore case for search
 set ignorecase
 
-"I hate noise
+" flash visual bell instead of beep
 set visualbell
 
 highlight Pmenu ctermfg=0 ctermbg=3
@@ -22,13 +22,13 @@ highlight PmenuSel ctermfg=0 ctermbg=7
 "The following should be done automatically for the default colour scheme
 "at least, but it is not in Vim 7.0.17 at least.
 if &bg == "dark"
-  highlight MatchParen ctermbg=darkblue guibg=blue
+	highlight MatchParen ctermbg=darkblue guibg=blue
 endif
 "Syntax highlighting if appropriate
 if &t_Co > 2 || has("gui_running")
-    syntax on
-    set hlsearch
-    set incsearch "For fast terminals can highlight search string as you type
+	syntax on
+	set hlsearch
+	set incsearch "For fast terminals can highlight search string as you type
 endif
 
 colorscheme af
@@ -54,9 +54,17 @@ set shiftround      " round to 'shiftwidth' for `<<` and `>>`
 set smarttab        " a  in an indent inserts 'shiftwidth' spaces
 
 set tabstop=4
-set expandtab
+set hardtabs=4
 set shiftwidth=4
-set softtabstop=4
+"soft tabs:
+"set expandtab
+"set softtabstop=4
+
+set listchars=tab:»·,trail:·
+
+			
+set mouse=nvi
+
 
 " Reading And Writing:                      {{{2
 set noautoread      " (don't) automatically read a file when it was modified outside of Vim
@@ -79,12 +87,17 @@ set modelines=3         " number of lines to scan for modeline
     " "}}}
 
 " key maps
+noremap <C-U> :set list!<CR>
 noremap <C-J> :set number!<bar>set number?<CR>
 noremap <C-K> :!if [ -x ./devJSP.sh ]; then ./devJSP.sh %; echo updated; fi<CR>
 noremap <C-H> :!mysql --verbose -u root -pSuperSermo\! sputnik < %<CR>
 noremap <C-D> :!svn diff % \| less<CR>
 
+" Change Swap (.swp) files default path
+set directory=~/tmp
+set backupdir=~/tmp/bak
+
 " Use CTRL-S for saving, also in Insert mode
 
-"noremap <C-S> :update<CR>:!if [ -x ./devJSP.sh ]; then ./devJSP.sh %; fi<CR>
+" map :Q to :q
 command! Q :q
