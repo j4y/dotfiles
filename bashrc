@@ -1,4 +1,6 @@
 # System-wide .bashrc file for interactive bash(1) shells.
+# this file is sourced whenever a script written in bash executes
+# this should really only include bash specific settings
 
 # To enable the settings / commands in this file for login shells as well,
 # this file has to be sourced in /etc/profile.
@@ -10,51 +12,17 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
+# ls aliases
+alias ll='ls -l'
+alias la='ls -A'
 
-# set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# configure the bash prompt
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]\[\033[00m\]\$ '
 
-# Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
-# If this is an xterm set the title to user@host:dir
-#case "$TERM" in
-#xterm*|rxvt*)
-#    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-#    ;;
-#*)
-#    ;;
-#esac
+# turn listing color on
+export CLICOLOR=1
+# config LSCOLORS (BSD/OSX)
+export LSCOLORS=exfxcxdxbxegedabagacad
+# config LS_COLORS (Linux)
+#export LS_COLORS=di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:
 
-# enable bash completion in interactive shells
-#if [ -f /etc/bash_completion ]; then
-#    . /etc/bash_completion
-#fi
-
-# sudo hint
-if [ ! -e $HOME/.sudo_as_admin_successful ]; then
-    case " $(groups) " in *\ admin\ *)
-    if [ -x /usr/bin/sudo ]; then
-	cat <<-EOF
-	To run a command as administrator (user "root"), use "sudo <command>".
-	See "man sudo_root" for details.
-	
-	EOF
-    fi
-    esac
-fi
-
-# if the command-not-found package is installed, use it
-if [ -x /usr/lib/command-not-found ]; then
-	function command_not_found_handle {
-	        # check because c-n-f could've been removed in the meantime
-                if [ -x /usr/lib/command-not-found ]; then
-		   /usr/bin/python /usr/lib/command-not-found -- $1
-                   return $?
-		else
-		   return 127
-		fi
-	}
-fi

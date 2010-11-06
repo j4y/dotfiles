@@ -1,5 +1,5 @@
 # This applies to all cvs <foo> commands -z3 enables compression
-cvs		-z4
+cvs		-z9
 #diff/rdiff -u provides unified diff  -p print to standard output
 diff	-pu
 rdiff	-u
