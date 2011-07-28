@@ -21,3 +21,4 @@ export ANT_OPTS=-Dbuild.sysclasspath=ignore ant
 export ARCHFLAGS="-arch x86_64"
 export SVN_EDITOR=vi
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # load RVM
