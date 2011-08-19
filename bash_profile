@@ -7,6 +7,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+# Add XCode binaries
+if [ -e /Developer/usr/bin ]; then
+	export PATH=/Developer/usr/bin:$PATH
+fi
+
 
 export PATH=$PATH:/opt/local/bin
 export PATH=/opt/local/apache2/bin:$PATH
