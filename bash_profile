@@ -31,7 +31,7 @@ if [ -e $ANT_HOME ]; then
 fi
 
 # Java
-export JBOSS_HOME="/landslide/jboss-5.1.0.GA"
+export JBOSS_HOME="/landslide/jboss-6.0.0.Final/"
 export JAVA_HOME="/Library/Java/Home"
 
 # Oracle

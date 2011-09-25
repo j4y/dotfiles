@@ -60,9 +60,9 @@ set shiftwidth=4
 "set expandtab
 "set softtabstop=4
 
-set listchars=tab:»·,trail:·
-
-			
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+hi NonText ctermfg=7 guifg=gray
 set mouse=nvi
 
 
