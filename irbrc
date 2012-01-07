@@ -207,8 +207,9 @@ unless self.class.const_defined? "IRB_RC_HAS_LOADED"
       data.size
     end
   end
-  
-  ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+
+  unless 'macruby' == RUBY_ENGINE
+    ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+  end
   IRB_RC_HAS_LOADED = true
 end
-  
