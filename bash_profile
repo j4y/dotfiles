@@ -19,8 +19,8 @@ if [ -e /opt/local/apache2 ]; then
 	export PATH=/opt/local/apache2/bin:$PATH
 fi
 # Mysql
-if [ -e /usr/local/mysql-5.1.38-osx10.5-x86_64/bin ]; then
-	export PATH=$PATH:/usr/local/mysql-5.1.38-osx10.5-x86_64/bin
+if [ -e /usr/local/mysql/bin ]; then
+	export PATH=$PATH:/usr/local/mysql/bin
 fi
 # Ant 
 export ANT_HOME="/landslide/apache-ant-1.8.2"
