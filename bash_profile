@@ -31,18 +31,21 @@ if [ -e $ANT_HOME ]; then
 fi
 
 # Java
-export JBOSS_HOME="/landslide/jboss-6.0.0.Final/"
+#export JBOSS_HOME="/landslide/jboss-6.0.0.Final/"
 export JAVA_HOME="/Library/Java/Home"
 
-# Oracle
-export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
-if [ -e $ORACLE_HOME ]; then
-	export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
-	export ORACLE_SID=orcl
-	export ORACLE_BASE=$HOME
-	export PATH=$PATH:$ORACLE_HOME/bin
-fi
+# Grails
+export GRAILS_HOME=/usr/share/java/grails
+export PATH=$GRAILS_HOME/bin:$PATH
 
+# Oracle
+#export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
+#if [ -e $ORACLE_HOME ]; then
+	#export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+	#export ORACLE_SID=orcl
+	#export ORACLE_BASE=$HOME
+	#export PATH=$PATH:$ORACLE_HOME/bin
+#fi
 
 # Flash log
 alias fl='tail -F ${HOME}/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
