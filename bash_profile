@@ -38,6 +38,10 @@ export JAVA_HOME="/Library/Java/Home"
 export GRAILS_HOME=/usr/share/java/grails
 export PATH=$GRAILS_HOME/bin:$PATH
 
+# Groovy
+export GROOVY_HOME=/usr/share/java/groovy
+export PATH=$GROOVY_HOME/bin:$PATH
+
 # Oracle
 #export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
 #if [ -e $ORACLE_HOME ]; then
