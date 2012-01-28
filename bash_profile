@@ -22,12 +22,11 @@ fi
 if [ -e /usr/local/mysql/bin ]; then
 	export PATH=$PATH:/usr/local/mysql/bin
 fi
-# Ant 
-export ANT_HOME="/landslide/apache-ant-1.8.2"
+# Another Neat Tool
+export ANT_HOME="/usr/share/java/ant-1.8.2"
 if [ -e $ANT_HOME ]; then
 	export PATH=${ANT_HOME}/bin:$PATH
-	# TODO: remove the ANT_OPTS var and fix build.xml with includeantruntime="false"
-	export ANT_OPTS=-Dbuild.sysclasspath=ignore ant
+	#export ANT_OPTS=-Dbuild.sysclasspath=ignore ant
 fi
 
 # Java
