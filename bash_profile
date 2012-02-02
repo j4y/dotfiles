@@ -36,11 +36,15 @@ export JAVA_HOME="/Library/Java/Home"
 
 # Grails
 export GRAILS_HOME=/usr/share/java/grails
+#export GRAILS_OPTS=-Daffdex_x2.config.location=local.config.groovy
 export PATH=$GRAILS_HOME/bin:$PATH
 
 # Groovy
 export GROOVY_HOME=/usr/share/java/groovy
 export PATH=$GROOVY_HOME/bin:$PATH
+
+# Tomcat
+export CATALINA_HOME=/Library/Tomcat
 
 # Oracle
 #export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
