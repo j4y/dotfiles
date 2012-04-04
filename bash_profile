@@ -2,6 +2,9 @@
 # this file mostly for path and environment variable setup
 # Get the aliases and functions, color settings, etc
 
+export CLICOLOR=1
+export LSCOLORS=cxfxexexDxexexDxDxcxcx
+
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
@@ -56,6 +59,10 @@ export CATALINA_HOME=/Library/Tomcat
 
 # Flash log
 alias fl='tail -F ${HOME}/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
+
+# Python lib
+export PYTHONPATH="$PYTHONPATH:$HOME/Code/web/lib/python"
+
 
 # Source control
 export CVSROOT=":pserver:${USER}@192.168.1.10:/usr/cvs"
