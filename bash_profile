@@ -25,6 +25,12 @@ fi
 if [ -e /usr/local/mysql/bin ]; then
 	export PATH=$PATH:/usr/local/mysql/bin
 fi
+
+# Homebrew
+if [ -e /usr/local/sbin ]; then
+    export PATH=$PATH:/usr/local/sbin:
+fi
+
 # Another Neat Tool
 export ANT_HOME="/usr/share/java/ant-1.8.2"
 if [ -e $ANT_HOME ]; then
