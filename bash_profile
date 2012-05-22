@@ -73,11 +73,7 @@ else
 	export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 fi
 
-
-
 # Source control
-export CVSROOT=":pserver:${USER}@192.168.1.10:/usr/cvs"
-export CVSEDITOR=/usr/bin/vim
 export SVN_EDITOR=vi
 
 # Misc
