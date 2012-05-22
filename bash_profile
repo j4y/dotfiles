@@ -67,7 +67,12 @@ export CATALINA_HOME=/Library/Tomcat
 alias fl='tail -F ${HOME}/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
 
 # Python lib
-export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+if [ -z $PYTHONPATH ]; then
+	export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages"
+else
+	export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+fi
+
 
 
 # Source control
