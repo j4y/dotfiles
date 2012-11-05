@@ -8,6 +8,9 @@
 # no annoying audible bell, please
 vbell on
 
+#enable utf8 support
+defutf8 on
+
 # detach on hangup
 autodetach on
 
