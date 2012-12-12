@@ -1,0 +1,4 @@
+# personal ssh key
+#IdentityFile ~/.ssh/id_rsa.personal
+# work ssh key
+IdentityFile ~/.ssh/id_rsa
