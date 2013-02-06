@@ -44,7 +44,7 @@ export JAVA_HOME="/Library/Java/Home"
 
 # Grails
 export GRAILS_HOME=/usr/share/java/grails
-#export GRAILS_OPTS=-Daffdex_x2.config.location=local.config.groovy
+export GRAILS_OPTS="-server -XX:+UseCodeCacheFlushing -XX:MaxInlineLevel=15 -Xmn3000M -Xms4000M -Xmx4000M -XX:NewRatio=1 -noverify -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
 export PATH=$GRAILS_HOME/bin:$PATH
 
 # Groovy
