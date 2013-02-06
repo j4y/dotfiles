@@ -1,4 +1,6 @@
 [user]
 	name = Jay Prall
 [push]
-	default = upstream
+	default = current
+[color]
+	ui = auto
