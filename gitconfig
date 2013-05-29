@@ -1,6 +1,27 @@
 [user]
 	name = Jay Prall
+	email = jay.prall@affectiva.com
 [push]
 	default = current
 [color]
 	ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	st = status
+	merge = merge --no-ff
+	co = checkout
+# http://blog.kfish.org/2010/04/git-lola.html
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[log]
+	pretty = oneline
+
