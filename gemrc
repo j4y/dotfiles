@@ -7,3 +7,4 @@
 :update_sources: true
 :backtrace: false
 :verbose: true
+gem: --no-ri --no-rdoc
