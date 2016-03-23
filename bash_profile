@@ -39,8 +39,7 @@ if [ -e $ANT_HOME ]; then
 fi
 
 # Java
-#export JBOSS_HOME="/landslide/jboss-6.0.0.Final/"
-export JAVA_HOME="/Library/Java/Home"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
 
 # Grails
 export GRAILS_HOME=/usr/share/java/grails
