@@ -95,7 +95,6 @@ noremap <C-D> :!svn diff % \| less<CR>
 
 " Change Swap (.swp) files default path
 set directory=~/tmp
-set backupdir=~/tmp/bak
 
 " Use CTRL-S for saving, also in Insert mode
 
