@@ -82,5 +82,9 @@ umask 022
 ulimit -Hn 65536
 ulimit -Sn 65536
 
+# AWS configuration
+export AWS_ACCESS_KEY_ID="$(aws configure get aws_access_key_id)"
+export AWS_SECRET_ACCESS_KEY="$(aws configure get aws_secret_access_key)"
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
