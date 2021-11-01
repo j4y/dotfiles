@@ -8,6 +8,15 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+
+# SSH Agent should be running, once
+runcount=$(ps -ef | grep "ssh-agent" | grep -v "grep" | wc -l)
+if [ $runcount -eq 0 ]; then
+    echo Starting SSH Agent
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/id_rsa
+fi
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
