@@ -1,7 +1,6 @@
 [user]
 	name = Jay Prall
-	# TODO: replace with company domain
-	email = jprall@example.com
+	email = jayprall@gmail.com
 
 [init]
     defaultBranch = main
