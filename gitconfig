@@ -1,20 +1,29 @@
 [user]
 	name = Jay Prall
-	email = jprall@linksquares.com
+	# TODO: replace with company domain
+	email = jprall@example.com
+
+[init]
+    defaultBranch = main
+
 [push]
 	default = current
+
 [color]
 	ui = auto
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [alias]
 	st = status
 	merge = merge --no-ff
@@ -22,6 +31,7 @@
 # http://blog.kfish.org/2010/04/git-lola.html
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
 [log]
 	pretty = oneline
 
@@ -30,8 +40,10 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+
 [core]
-	editor = mate -w
+	editor = code --wait
 	excludesfile = /Users/jprall/.gitignore_global
+
 [credential]
 	helper = cache --timeout 3600
