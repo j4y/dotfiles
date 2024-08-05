@@ -94,7 +94,7 @@ noremap <C-H> :!mysql --verbose -u root -pSuperSermo\! sputnik < %<CR>
 noremap <C-D> :!svn diff % \| less<CR>
 
 " Change Swap (.swp) files default path
-set directory=~/tmp
+set directory=~/.vim/swap,.
 
 " Use CTRL-S for saving, also in Insert mode
 
