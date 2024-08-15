@@ -14,7 +14,7 @@ runcount=$(ps -ef | grep "ssh-agent" | grep -v "grep" | wc -l)
 if [ $runcount -eq 0 ]; then
     echo Starting SSH Agent
     eval $(ssh-agent -s)
-    ssh-add ~/.ssh/id_rsa
+    ssh-add ~/.ssh/id_ed25519
 fi
 
 # check the window size after each command and, if necessary,
@@ -68,7 +68,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 eval "$(fasd --init auto)"
 
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/jayprall/.gvm/bin/gvm-init.sh" ]] && source "/Users/jayprall/.gvm/bin/gvm-init.sh"
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# load asdf
+. /home/jprall/.asdf/asdf.sh
