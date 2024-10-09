@@ -72,3 +72,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # load asdf
 . /home/jprall/.asdf/asdf.sh
+
+export UI_TAG=develop
+export COMM_TAG=develop
+export CONFIG_TAG=develop
