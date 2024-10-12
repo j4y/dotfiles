@@ -68,12 +68,10 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # configure zoxide
 eval "$(zoxide init bash)"
 
-
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # load asdf
-. /home/jprall/.asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
 
 export UI_TAG=develop
 export COMM_TAG=develop
