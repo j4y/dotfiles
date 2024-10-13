@@ -73,6 +73,10 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # load asdf
 . $HOME/.asdf/asdf.sh
 
+export DESTINATION_HOST=localhost
+export DESTINATION_PORT=30000
+
+
 export UI_TAG=develop
 export COMM_TAG=develop
 export CONFIG_TAG=develop
