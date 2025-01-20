@@ -90,3 +90,7 @@ export AWS_SECRET_ACCESS_KEY="$(aws configure get aws_secret_access_key)"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+eval "$(zoxide init bash)"
+
+
