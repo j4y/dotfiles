@@ -65,6 +65,8 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # config LS_COLORS (Linux)
 #export LS_COLORS=di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # configure zoxide
 eval "$(zoxide init bash)"
 
@@ -80,3 +82,8 @@ export DESTINATION_PORT=30000
 export UI_TAG=develop
 export COMM_TAG=develop
 export CONFIG_TAG=develop
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jprall/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+eval "$(direnv hook bash)"
