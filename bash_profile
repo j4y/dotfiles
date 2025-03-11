@@ -5,6 +5,10 @@
 export CLICOLOR=1
 export LSCOLORS=cxfxexexDxexexDxDxcxcx
 
+export HEX_CACERTS_PATH=~/zscaler/ZscalerRootCertificate-2048-SHA256.pem
+export NODE_EXTRA_CA_CERTS=/Users/jprall/zscaler/ZscalerRootCertificate-2048-SHA256.pem
+
+
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
@@ -31,60 +35,14 @@ if [ -e /usr/local/sbin ]; then
     export PATH=$PATH:/usr/local/sbin:
 fi
 
-# Another Neat Tool
-export ANT_HOME="/usr/share/java/ant-1.8.2"
-if [ -e $ANT_HOME ]; then
-	export PATH=${ANT_HOME}/bin:$PATH
-	#export ANT_OPTS=-Dbuild.sysclasspath=ignore ant
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
 
-# Grails
-export GRAILS_HOME=/usr/share/java/grails
-export GRAILS_OPTS="-server -XX:+UseCodeCacheFlushing -XX:MaxInlineLevel=15 -Xmn3000M -Xms4000M -Xmx4000M -XX:NewRatio=1 -noverify -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
-export PATH=$GRAILS_HOME/bin:$PATH
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jprall/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-# Groovy
-export GROOVY_HOME=/usr/share/java/groovy
-export PATH=$GROOVY_HOME/bin:$PATH
-
-# Tomcat
-export CATALINA_HOME=/Library/Tomcat
-
-# Oracle
-#export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
-#if [ -e $ORACLE_HOME ]; then
-	#export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
-	#export ORACLE_SID=orcl
-	#export ORACLE_BASE=$HOME
-	#export PATH=$PATH:$ORACLE_HOME/bin
-#fi
-
-# Flash log
-alias fl='tail -F ${HOME}/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
-
-# Python lib
-if [ -z $PYTHONPATH ]; then
-	export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages"
-else
-	export PYTHONPATH="$HOME/Code/web/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-fi
-
-# Source control
-export SVN_EDITOR=vi
-
-# Misc
-export ARCHFLAGS="-arch x86_64"
-export DISPLAY=:0.0
-umask 022
-ulimit -Hn 65536
-ulimit -Sn 65536
-
-# AWS configuration
-export AWS_ACCESS_KEY_ID="$(aws configure get aws_access_key_id)"
-export AWS_SECRET_ACCESS_KEY="$(aws configure get aws_secret_access_key)"
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+# Setting PATH for Python 3.12
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
+export PATH
