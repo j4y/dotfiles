@@ -1,12 +1,6 @@
 # Machine-generated file - use setup menu in minicom to change parameters.
-pu lock             /opt/homebrew/Cellar/minicom/2.10/var
 pu escape-key       Escape (Meta)
 pu backspace        BS
 pu statusline       disabled
 pu rtscts           Yes
 pu histlines        5000
-
-# disable modem init strings
-#pu minit
-#pu mreset
-#pu mhangup
