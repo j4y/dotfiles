@@ -1,5 +1,5 @@
 [user]
-	name = Jay Prall
+	name = j4y
 	email = 36337+j4y@users.noreply.github.com
 
 [init]
@@ -43,6 +43,7 @@
 [core]
 	editor = code --wait
 	excludesfile = /Users/jprall/.gitignore_global
+	autocrlf = false
 
 [credential]
 	helper = cache --timeout 3600
